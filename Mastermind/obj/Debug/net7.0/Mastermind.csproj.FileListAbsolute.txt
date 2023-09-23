@@ -1,0 +1,14 @@
+c:\Users\thoma\Documents\Programming Projects\Terminal-Games\Mastermind\bin\Debug\net7.0\Mastermind.exe
+c:\Users\thoma\Documents\Programming Projects\Terminal-Games\Mastermind\bin\Debug\net7.0\Mastermind.deps.json
+c:\Users\thoma\Documents\Programming Projects\Terminal-Games\Mastermind\bin\Debug\net7.0\Mastermind.runtimeconfig.json
+c:\Users\thoma\Documents\Programming Projects\Terminal-Games\Mastermind\bin\Debug\net7.0\Mastermind.dll
+c:\Users\thoma\Documents\Programming Projects\Terminal-Games\Mastermind\bin\Debug\net7.0\Mastermind.pdb
+c:\Users\thoma\Documents\Programming Projects\Terminal-Games\Mastermind\obj\Debug\net7.0\Mastermind.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\thoma\Documents\Programming Projects\Terminal-Games\Mastermind\obj\Debug\net7.0\Mastermind.AssemblyInfoInputs.cache
+c:\Users\thoma\Documents\Programming Projects\Terminal-Games\Mastermind\obj\Debug\net7.0\Mastermind.AssemblyInfo.cs
+c:\Users\thoma\Documents\Programming Projects\Terminal-Games\Mastermind\obj\Debug\net7.0\Mastermind.csproj.CoreCompileInputs.cache
+c:\Users\thoma\Documents\Programming Projects\Terminal-Games\Mastermind\obj\Debug\net7.0\Mastermind.dll
+c:\Users\thoma\Documents\Programming Projects\Terminal-Games\Mastermind\obj\Debug\net7.0\refint\Mastermind.dll
+c:\Users\thoma\Documents\Programming Projects\Terminal-Games\Mastermind\obj\Debug\net7.0\Mastermind.pdb
+c:\Users\thoma\Documents\Programming Projects\Terminal-Games\Mastermind\obj\Debug\net7.0\Mastermind.genruntimeconfig.cache
+c:\Users\thoma\Documents\Programming Projects\Terminal-Games\Mastermind\obj\Debug\net7.0\ref\Mastermind.dll
