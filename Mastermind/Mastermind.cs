@@ -1,21 +1,19 @@
-﻿using System.Runtime.CompilerServices;
-using System.Security.Cryptography;
-
-public class Mastermind {
+﻿public class Mastermind {
     int[] answer = new int[] { 0, 0, 0, 0 };
     int threshold = 10;
-    string rawGuess = "";
+    string? rawGuess = "";
+    bool validGuess;
     int[] guess = new int[] { 0, 0, 0, 0 };
     int hits;
     int blows;
     bool gameWon = false;
 
     public static void Main() {
-        Mastermind game = new Mastermind();
-        game.run();
+        Mastermind game = new();
+        game.Run();
     }
 
-    public void run() {
+    public void Run() {
         Console.WriteLine("Here are the rules of Mastermind:");
         Console.WriteLine("Four distinct numbers between 1 and 9 will be randomly chosen. It will be your job to guess the correct numbers, in the correct order.");
         Console.WriteLine("For each guess, you get feedback. You are told how many of the numbers you guessed are 'hits' or 'blows'");
@@ -23,19 +21,21 @@ public class Mastermind {
         Console.WriteLine("A 'blow' is a number that is in the answer, but is in the wrong position.");
         Console.WriteLine("The dificulty is determined by the number of guesses you get.");
         Console.WriteLine("Type 'dif' if you want to change the dificulty, otherwise just press enter:");
-        string input = Console.ReadLine();
-        if (input.Equals("dif")) {
-            Console.WriteLine("How many guesses do you want?");
-            while (!changeDificulty(Console.ReadLine())) {
-                Console.WriteLine("That's not a valid number. Try again.");
+        string? input = Console.ReadLine();
+        if (input != null) {
+            if (input.Equals("dif")) {
+                Console.WriteLine("How many guesses do you want?");
+                while (!int.TryParse(input, out threshold)) {
+                    Console.WriteLine("That's not a valid number. Try again.");
+                }
             }
+            Console.WriteLine("Beginning the game!");
+            BeginGame();
+            PrintEnding();
         }
-        Console.WriteLine("Beginning the game!");
-        beginGame();
-        printEnding();
     }
 
-    public void beginGame() {
+    public void BeginGame() {
         Random generator = new Random();
         for (int i = 0; i < 4; i++) {
             int newNumber = 0;
@@ -48,9 +48,9 @@ public class Mastermind {
             Console.WriteLine("Round number " + i + ":");
             do {
                 rawGuess = Console.ReadLine();
-            } while (!evaluateValidity(rawGuess));
-            evaluateGuess(guess);
-            printResults();
+            } while (!EvaluateValidity(rawGuess));
+            EvaluateGuess(guess);
+            PrintResults();
             if (hits == 4) {
                 gameWon = true;
                 break;
@@ -58,24 +58,26 @@ public class Mastermind {
         }
     }
 
-    public bool evaluateValidity(string input) {
-        if (input.Length == 4) {
+    public bool EvaluateValidity(string? input) {
+        validGuess = true;
+        if (input != null && input.Length == 4) {
             try {
                 for (int i = 0; i < 4; i++) {
-                    guess[i] = int.Parse(input[i].ToString());
+                    // Check if parsing worked for all four input chars
+                    validGuess = validGuess && int.TryParse(new ReadOnlySpan<char>(input[i]), out guess[i]);
                 }
+                return validGuess;
             } catch (Exception) {
-                Console.WriteLine("\tInvalid guess! Please guess four numbers between 1 and 9");
+                Console.WriteLine("\tException occurred while ");
                 return false;
             }
         } else {
             Console.WriteLine("\tInvalid guess! Please guess four numbers between 1 and 9");
             return false;
         }
-        return true;
     }
 
-    public void evaluateGuess(int[] guess) {
+    public void EvaluateGuess(int[] guess) {
         hits = 0;
         blows = 0;
         for (int i = 0; i < 4; i++) {
@@ -89,26 +91,17 @@ public class Mastermind {
         }
     }
 
-    public void printResults() {
+    public void PrintResults() {
         Console.WriteLine("Hits: " + hits + "\tBlows: " + blows);
     }
 
-    public void printEnding() {
+    public void PrintEnding() {
         if (gameWon) {
             Console.WriteLine("You guessed it! You win!");
         } else {
             Console.WriteLine("No more guesses! You lose! The correct answer was " + string.Join("", answer));
         }
         Console.WriteLine("Game Over!");
-    }
-
-    public bool changeDificulty(string input) {
-        try {
-            threshold = int.Parse(input);
-            return true;
-        } catch (Exception) {
-            return false;
-        }
     }
 }
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\thoma\\Documents\\Programming Projects\\Terminal-Games\\Mastermind\\Mastermind.csproj": {}
+    "C:\\Users\\thoma\\Documents\\Programming Projects\\Terminal-Games\\Mastermind\\Mastermind.csproj": {}
   },
   "projects": {
-    "c:\\Users\\thoma\\Documents\\Programming Projects\\Terminal-Games\\Mastermind\\Mastermind.csproj": {
+    "C:\\Users\\thoma\\Documents\\Programming Projects\\Terminal-Games\\Mastermind\\Mastermind.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\thoma\\Documents\\Programming Projects\\Terminal-Games\\Mastermind\\Mastermind.csproj",
+        "projectUniqueName": "C:\\Users\\thoma\\Documents\\Programming Projects\\Terminal-Games\\Mastermind\\Mastermind.csproj",
         "projectName": "Mastermind",
-        "projectPath": "c:\\Users\\thoma\\Documents\\Programming Projects\\Terminal-Games\\Mastermind\\Mastermind.csproj",
+        "projectPath": "C:\\Users\\thoma\\Documents\\Programming Projects\\Terminal-Games\\Mastermind\\Mastermind.csproj",
         "packagesPath": "C:\\Users\\thoma\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\thoma\\Documents\\Programming Projects\\Terminal-Games\\Mastermind\\obj\\",
+        "outputPath": "C:\\Users\\thoma\\Documents\\Programming Projects\\Terminal-Games\\Mastermind\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\thoma\\AppData\\Roaming\\NuGet\\NuGet.Config"
