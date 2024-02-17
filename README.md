@@ -1,2 +1,2 @@
 # Terminal-Games
-Small programming project, consisting of games to be played in the console
+Small programming projects, consisting of games to be played in the console
